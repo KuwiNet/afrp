@@ -130,7 +130,7 @@ export default defineConfig({
       }),
       prod &&
         llmstxt({
-          workDir: 'en',
+          workDir: 'zh',
           ignoreFiles: ['index.md']
         })
     ],
