@@ -12,8 +12,8 @@ export default defineAdditionalConfig({
     nav: nav(),
 
     sidebar: {
-      '/guide/': { base: '/guide/', items: sidebarGuide() },
-      '/reference/': { base: '/reference/', items: sidebarReference() }
+      '/en/guide/': { base: '/en/guide/', items: sidebarGuide() },
+      '/en/reference/': { base: '/en/reference/', items: sidebarReference() }
     },
 
     editLink: {
@@ -32,13 +32,13 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: 'Guide',
-      link: '/guide/what-is-vitepress',
-      activeMatch: '/guide/'
+      link: '/en/guide/what-is-vitepress',
+      activeMatch: '/en/guide/'
     },
     {
       text: 'Reference',
-      link: '/reference/site-config',
-      activeMatch: '/reference/'
+      link: '/en/reference/site-config',
+      activeMatch: '/en/reference/'
     },
     {
       text: pkg.version,
@@ -101,7 +101,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'Sitemap Generation', link: 'sitemap-generation' }
       ]
     },
-    { text: 'Config & API Reference', base: '/reference/', link: 'site-config' }
+    { text: 'Config & API Reference', base: '/en/reference/', link: 'site-config' }
   ]
 }
 
