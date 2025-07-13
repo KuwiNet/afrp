@@ -47,7 +47,7 @@ export default defineConfig({
           }
         })()
         return fence(tokens, idx, options, env, self).replace(
-          '<button title="Copy Code" class="copy"></button>',
+          '<button title="复制代码" class="copy"></button>',
           `<button title="${codeCopyButtonTitle}" class="copy"></button>`
         )
       }
