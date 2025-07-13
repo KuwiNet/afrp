@@ -13,10 +13,10 @@ import llmstxt from 'vitepress-plugin-llms'
 const prod = !!process.env.NETLIFY
 
 export default defineConfig({
-  title: 'VitePress',
+  title: 'Afrp',
 
   rewrites: {
-    'en/:rest*': ':rest*'
+    'zh/:rest*': ':rest*'
   },
 
   lastUpdated: true,
@@ -40,20 +40,10 @@ export default defineConfig({
         const { localeIndex = 'root' } = env
         const codeCopyButtonTitle = (() => {
           switch (localeIndex) {
-            case 'es':
-              return 'Copiar código'
-            case 'fa':
-              return 'کپی کد'
-            case 'ko':
-              return '코드 복사'
-            case 'pt':
-              return 'Copiar código'
-            case 'ru':
-              return 'Скопировать код'
-            case 'zh':
-              return '复制代码'
-            default:
+            case 'en':
               return 'Copy code'
+            default:
+              return '复制代码'
           }
         })()
         return fence(tokens, idx, options, env, self).replace(
@@ -123,13 +113,8 @@ export default defineConfig({
   },
 
   locales: {
-    root: { label: 'English' },
-    zh: { label: '简体中文' },
-    pt: { label: 'Português' },
-    ru: { label: 'Русский' },
-    es: { label: 'Español' },
-    ko: { label: '한국어' },
-    fa: { label: 'فارسی' }
+    root: { label: '简体中文' },
+    en: { label: 'English' }
   },
 
   vite: {
